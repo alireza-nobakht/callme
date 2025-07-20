@@ -1,0 +1,14 @@
+syntax = "proto3";
+package greeter;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+message HelloRequest {
+  string name = 1;               // The class for request parameters, has field 'name' and unique tag 1
+} 
+
+message HelloReply {
+  string message = 1;            // The class for return message, has field 'message' and unique tag 1
+}
